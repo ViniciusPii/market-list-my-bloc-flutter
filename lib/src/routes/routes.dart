@@ -7,8 +7,8 @@ class Routes {
   static const String login = '/login';
 
   late final routes = <String, WidgetBuilder>{
+    login: (context) => LoginPage(),
     splash: (context) => SplashPage(),
-    login: (context) => const LoginPage(),
   };
 
   T getParans<T>(BuildContext context) => ModalRoute.of(context)?.settings.arguments as T;
