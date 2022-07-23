@@ -11,7 +11,7 @@ class AppExtension {
   static const Color primaryDark = AppColors.pink800;
   static const Color primaryLight = AppColors.pink200;
   static const Color secondary = AppColors.pink400;
-  static const Color background = AppColors.white;
+  static const Color background = AppColors.celeste200;
 
   //Text Color
   static const Color textColor = AppColors.neutral800;
