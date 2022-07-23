@@ -19,6 +19,6 @@ injection() {
   );
 
   //controllers
-  di.registerFactory(() => SplashBloc());
+  di.registerFactory(() => SplashBloc(firebaseAuth: get()));
   di.registerFactory(() => LoginBloc(authRepository: get()));
 }

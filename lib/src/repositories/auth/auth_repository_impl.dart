@@ -28,4 +28,10 @@ class AuthRepositoryImpl implements AuthRepository {
       throw AppException(message: 'Erro ao realizar o login!');
     }
   }
+
+  @override
+  Future<void> signOut() async {
+    await _firebaseAuth.signOut();
+    GoogleSignIn().disconnect();
+  }
 }
