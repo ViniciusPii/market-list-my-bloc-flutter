@@ -9,9 +9,9 @@ class Routes {
   static const String login = '/login';
 
   late final routes = <String, WidgetBuilder>{
+    home: (context) => HomePage(),
     login: (context) => LoginPage(),
     splash: (context) => SplashPage(),
-    home: (context) => const HomePage(),
   };
 
   T getParans<T>(BuildContext context) => ModalRoute.of(context)?.settings.arguments as T;

@@ -86,4 +86,17 @@ class NumberDecimalInputFormatter extends TextInputFormatter {
     _formatter(newText);
     return _newString;
   }
+
+  static String decimalFormat<T>({
+    required T value,
+    int? decimal,
+    String? symbol,
+  }) =>
+      NumberFormat.currency(
+        name: symbol ?? '',
+        locale: 'pt_Br',
+        decimalDigits: decimal ?? 2,
+      ).format(value);
+
+  static unMaskNumber(String value) => value.replaceAll(RegExp('[^0-9]'), '');
 }
